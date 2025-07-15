@@ -8,32 +8,32 @@ $itemconfig 字符串中拼接了 {dede:function}...{/dede:function} 这类标�
 
 登录页面
 
-
+![img](images/图片1.png)
 
 分析代码
+![img](images/图片2.png)
 
- 
 
 代码解释：循环step=5的步骤中，$itemconfig = "{dede:sppage sptype=\\'$sptype\\' sptype=\\'$sptype\\' srul=\\'$srul\\' erul=\\'$erul\\'}$sppage{/dede:sppage}\r\n";  $itemconfig是生成采集规则配置字符串，其中{dede:function}...{/dede:function}是一个内置标签，官方文档和源码中都说明这个标签会 执行其中的 PHP 代码，用来在采集时调用函数或写自定义代码，采集模块调用 dedecollection.class.php 解析这段配置
 
 require_once(DEDEINC.'/dedecollection.class.php');
-
+![img](images/图片3.png)
  
 
 抓取数据包，为POST提交方式，提交数据
-
+![img](images/图片4.png)
  
 
 修改POST数据
-
+![img](images/图片5.png)
  
 
 查看页面，phpifo()执行成功
-
+![img](images/图片6.png)
  
 
 尝试进行编写一句话木马上传
-
+![img](images/图片7.png)
  
 
 Poc：
@@ -74,12 +74,12 @@ nid=3&channelid=1&step=5&previewurl=http%3A%2F%2Fwww.example.com&sppage=&sptype=
 
 在页面发现shell.php编写成功
 
- 
+ ![img](images/图片8.png)
 
 尝试蚁剑链接：
 
- 
-
+ ![img](images/图片9.png)
+![img](images/图片10.png)
  
 
  
