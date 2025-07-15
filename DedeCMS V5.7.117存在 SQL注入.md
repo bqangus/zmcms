@@ -5,25 +5,25 @@
 找到可控变量 $webname;
 
 发现if条件语句
-
+ ![img](images2/图片1.png)
  
 
 发现这是else if($dopost=="saveedit")循环条件
-
+ ![img](images2/图片2.png)
  
 
 进入 init（）、item（）
-
+ ![img](images2/图片3.png)
  
 
 这段 PHP 代码定义了一个类中的 Init() 方法，其作用是从 $_POST 和 $_GET 中提取用户提交的表单数据，并分别保存到类的属性中。
-
+ ![img](images2/图片4.png)
 
 这段代码的意思是从 $this->forms 中获取指定名称的表单字段值，如果不存在，则返回默认值。
 
 由此可见，对参数没有过滤，但是由于页面没有回显，尝试时间盲注来判断，语句是否执行有效。
 
- 
+  ![img](images2/图片5.png)
 
  
 
@@ -170,7 +170,8 @@ Content-Disposition: form-data; name="Submit"
 进行sql测试
 
 python3 sqlmap.py -r url.txt --dbs --batch -p sortrank --level 5 --risk 3
-
+ ![img](images2/图片6.png)
+  ![img](images2/图片7.png)
  
 
  
